@@ -19,17 +19,25 @@ How to Use:
 Run the program and input the number of candidates.
 Enter details for each candidate, including name and age.
 Choose from the following options:
+
 Cast Vote (Option 1): Allows users to cast votes for their preferred candidates.
+
 Display Final Result (Option 2): Displays the list of candidates and announces the winner.
+
 Exit System Without Result (Option 3): Exits the program without displaying the result.
 
 
 Functions:
 candInfo: Function to input candidate information.
+
 dispCands: Function to display the list of candidates with their information.
+
 dispCandsNameOnly: Function to display only the names of the candidates.
+
 castVote: Function to allow casting votes.
+
 maxVote: Function to find the candidate with the most votes.
+
 result: Function to display the election result.
 
 
