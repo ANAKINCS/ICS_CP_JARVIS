@@ -95,7 +95,7 @@ if(!(cand_no>n||cand_no<=0)){ // Check if the candidate number is within the val
 cand_list[cand_no-1].votes++; // Increment the votes for the selected candidate
 }
 
-if((cand_no>=n||cand_no<0)){ // Check if the candidate number is invalid
+if((cand_no>n||cand_no<0)){ // Check if the candidate number is invalid
 printf("Wrong Candidate Number!!"); // Display error message
 }
 }
