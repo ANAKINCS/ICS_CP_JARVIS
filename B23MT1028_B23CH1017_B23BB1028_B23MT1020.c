@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 struct Candidates {
     char name[30];
@@ -7,6 +8,7 @@ struct Candidates {
 };
 
 int draw;
+
 void candInfo(struct Candidates* cand);
 void dispCands(struct Candidates* cand_list, int n);
 void castVote(struct Candidates* cand_list, int n);
@@ -50,7 +52,7 @@ int main() {
     return 0;
 }
 
-void candInfo(struct Candidates* cand) {
+void candInfo(struct Candidates *cand) {
     char ch, read = 0;
     scanf("%c", &ch);
     printf("Name :");
@@ -72,6 +74,7 @@ void dispCands(struct Candidates* cand_list, int n) {
         }
         printf("\nAGE :%d", cand_list[i].age);
         printf("\nVOTES :%d\n", cand_list[i].votes);
+        sleep(2);
     }
 }
 
@@ -115,6 +118,7 @@ int maxVote(struct Candidates* cand_list, int n) {
             draw = 1;
         }
     }
+
     if (draw) {
         printf("There is a draw among candidates with %d votes.\n", maxValue);
         return -1;
@@ -125,7 +129,7 @@ int maxVote(struct Candidates* cand_list, int n) {
     return (maxIndex + 1);
 }
 
-void result(struct Candidates* cand_list, int n, int* d) {
+void result(struct Candidates* cand_list, int n, int *d) {
     int winnerIndex = maxVote(cand_list, n);
     if (*d == 0) {
         printf("\nWINNER :");
